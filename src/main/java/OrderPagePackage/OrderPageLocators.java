@@ -6,12 +6,12 @@ public class OrderPageLocators {
     private WebDriver driver;
     private By cookieConfirmButton = By.xpath(".//button[contains(@class, 'App_CookieButton')]");
 
-    public static final By whoIsNameInput = By.xpath(".//div[2]/div[1]/input");
-    public static final By whoIsSurnameInput = By.xpath(".//input[@placeholder='* Фамилия']");
-    public static final By whoIsAddressInput = By.xpath(".//input[contains(@placeholder, 'Адрес')]");
-    public static final By whoIsSubwayInput = By.xpath(".//input[contains(@placeholder, 'метро')]");
-    public static final By whoIsSubwayPicker = By.xpath(".//li[@class='select-search__row' and @data-index = '0']");
-    public static final By whoIsPhoneInput = By.xpath(".//input[contains(@placeholder, 'Телефон')]");
+    public static final By nameInput = By.xpath(".//div[2]/div[1]/input");
+    public static final By surnameInput = By.xpath(".//input[@placeholder='* Фамилия']");
+    public static final By addressInput = By.xpath(".//input[contains(@placeholder, 'Адрес')]");
+    public static final By subwayInput = By.xpath(".//input[contains(@placeholder, 'метро')]");
+    public static final By subwayPicker = By.xpath(".//li[@class='select-search__row' and @data-index = '0']");
+    public static final By phoneInput = By.xpath(".//input[contains(@placeholder, 'Телефон')]");
 
     public static final By orderFurtherButton = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
 
