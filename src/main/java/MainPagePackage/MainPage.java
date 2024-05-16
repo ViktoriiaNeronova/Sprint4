@@ -9,12 +9,15 @@ public class MainPage {
 
     WebElement whatIsThePriceButton;
     WebElement orderButton;
-    
+
+    WebElement howItWorkOrderButton;
+
     public MainPage(WebDriver driver){
         this.driver = driver;
 
         whatIsThePriceButton = driver.findElement(MainPageLocators.q1WhatIsThePriceButton);
         orderButton = driver.findElement(MainPageLocators.orderButton);
+        howItWorkOrderButton = driver.findElement(MainPageLocators.howItWorkOrderButton);
     }
 
     public void clickWhatIsPriceQuestion(){
@@ -28,5 +31,12 @@ public class MainPage {
 
     public boolean checkOrderButtonIsEnabled(){
         return orderButton.isEnabled();
+    }
+    public void clickHowItWorkOrderButton(){
+        howItWorkOrderButton.click();
+    }
+
+    public boolean checkhowItWorkOrderButtonIsEnabled(){
+        return howItWorkOrderButton.isEnabled();
     }
 }

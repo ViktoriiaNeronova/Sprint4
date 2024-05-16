@@ -21,7 +21,7 @@ public class TestQuestions {
     public void checkHowItCostQuestion(){
         Init();
         MainPage objMainPage = new MainPage(driver);
-        boolean isEnabled = objMainPage.checkOrderButtonIsEnabled();
+
     }
     @After
     public void teardown() {
