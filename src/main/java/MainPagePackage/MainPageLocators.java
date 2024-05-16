@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 public class MainPageLocators {
 
+    public static final By cookieConfirmButton = By.xpath( ".//button[contains(@class, 'App_CookieButton')]");
     public static final By yandexButton = By.xpath(".//a[@href='//yandex.ru']");
     public static final By scooterButton = By.xpath(".//a[@href='/']");
     public static final By orderButton = By.xpath(".//button[@class='Button_Button__ra12g' and text()='Заказать']");

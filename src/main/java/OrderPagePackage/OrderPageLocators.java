@@ -10,7 +10,6 @@ public class OrderPageLocators {
     public static final By surnameInput = By.xpath(".//input[@placeholder='* Фамилия']");
     public static final By addressInput = By.xpath(".//input[contains(@placeholder, 'Адрес')]");
     public static final By subwayInput = By.xpath(".//input[contains(@placeholder, 'метро')]");
-    public static final By subwayPicker = By.xpath(".//li[@class='select-search__row' and @data-index = '0']");
     public static final By phoneInput = By.xpath(".//input[contains(@placeholder, 'Телефон')]");
 
     public static final By orderFurtherButton = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
@@ -39,6 +38,6 @@ public class OrderPageLocators {
     public static final By viewStatusButton = By.xpath(".//button[text()= 'Посмотреть']");
     public static final By confirm_order_number_text = By.xpath(".//*/div/text()[2]");
 
-    public static final By compliteOrderModalWindowDisplayed = By.xpath(".//div[contains(@class, 'ModalHeader')]");
+    public static final By completeOrderModalWindowDisplayed = By.xpath(".//div[contains(@class, 'ModalHeader')]");
 
 }
