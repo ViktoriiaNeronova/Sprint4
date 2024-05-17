@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 
 public class OrderPageLocators {
     private WebDriver driver;
-    public static final By cookieConfirmButton = By.xpath(".//button[contains(@class, 'App_CookieButton')]");
 
     public static final By nameInput = By.xpath(".//div[2]/div[1]/input");
     public static final By surnameInput = By.xpath(".//input[@placeholder='* Фамилия']");
@@ -36,7 +35,6 @@ public class OrderPageLocators {
     public static final By backOrderButton = By.xpath(".//button[(text()='Назад') and contains(@class, 'Button_Middle')]");
 
     public static final By viewStatusButton = By.xpath(".//button[text()= 'Посмотреть']");
-    public static final By confirm_order_number_text = By.xpath(".//*/div/text()[2]");
 
     public static final By completeOrderModalWindowDisplayed = By.xpath(".//div[contains(@class, 'ModalHeader')]");
 

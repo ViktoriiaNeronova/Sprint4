@@ -57,10 +57,6 @@ public class OrderPage {
         WebElement subwayPicker = driver.findElement(By.xpath(".//li[@class='select-search__row' and @data-index = '" + index + "']"));
         subwayPicker.click();
     }
-    public String getSubwayValue(){
-        WebElement subwayInput = driver.findElement(OrderPageLocators.subwayInput);
-        return subwayInput.getAttribute("value");
-    }
 
     public void clickOrderFurtherButton(){
         WebElement orderFurtherButton = driver.findElement(OrderPageLocators.orderFurtherButton);
@@ -122,7 +118,7 @@ public class OrderPage {
         confirmOrderYesButton.click();
     }
 
-    // метод ожидания прогрузки данных профиля
+    // метод ожидания прогрузки окна создания заказа
     public void waitForLoadCompleteOrderModalWindow() {
         new WebDriverWait(driver, Duration.ofSeconds(1L)).until(driver -> (driver.findElement(OrderPageLocators.completeOrderModalWindowDisplayed).isEnabled()));
         assertTrue("Окно с сообщением об успешном создании заказа не появилось", driver.findElement(OrderPageLocators.completeOrderModalWindowDisplayed).isEnabled());

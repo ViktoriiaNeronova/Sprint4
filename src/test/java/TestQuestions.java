@@ -1,6 +1,4 @@
 import MainPagePackage.MainPage;
-import MainPagePackage.MainPageLocators;
-import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,8 +7,6 @@ import org.junit.After;
 import org.junit.Test;
 
 import java.time.Duration;
-
-import static org.hamcrest.CoreMatchers.is;
 
 public class TestQuestions {
     @Before
