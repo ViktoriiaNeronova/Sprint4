@@ -60,7 +60,6 @@ public class TestOrder {
         MainPage objMainPage = new MainPage(driver);
         objMainPage.clickOrderButton();
         objMainPage.clickCookieConfirmButton();
-        // wait until order page is loaded
         OrderPage objOrderPage = new OrderPage(driver);
         objOrderPage.setOrderForOneDay(name, surname, address, phone, subwayIndex, comment);
         objOrderPage.waitForLoadCompleteOrderModalWindow();
@@ -71,7 +70,6 @@ public class TestOrder {
         MainPage objMainPage = new MainPage(driver);
         objMainPage.clickCookieConfirmButton();
         objMainPage.clickHowItWorkOrderButton();
-        // wait until order page is loaded
         OrderPage objOrderPage = new OrderPage(driver);
         objOrderPage.setOrderForSevenDays(name, surname, address, phone, subwayIndex, comment);
         objOrderPage.waitForLoadCompleteOrderModalWindow();
