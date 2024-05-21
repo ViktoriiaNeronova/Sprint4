@@ -1,4 +1,5 @@
 import MainPagePackage.MainPage;
+import MainPagePackage.MainPageLocators;
 import OrderPagePackage.OrderPage;
 import org.junit.After;
 import org.junit.Before;
@@ -13,8 +14,7 @@ import java.time.Duration;
 
 
 @RunWith(Parameterized.class)
-public class TestOrder {
-    private WebDriver driver;
+public class TestOrder extends TestBase {
     private final String name;
     private final String surname;
     private final String address;
@@ -30,19 +30,15 @@ public class TestOrder {
         this.subwayIndex = subwayIndex;
         this.comment = comment;
 
-        Init();
-    }
-    @Before
-    public void setup() {
-        Init();
+        init();
     }
 
-    private void Init() {
+    private void init() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
         // переход на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+        driver.get(MainPageLocators.URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
@@ -73,10 +69,5 @@ public class TestOrder {
         OrderPage objOrderPage = new OrderPage(driver);
         objOrderPage.setOrderForSevenDays(name, surname, address, phone, subwayIndex, comment);
         objOrderPage.waitForLoadCompleteOrderModalWindow();
-    }
-    @After
-    public void teardown() {
-        // Закрой браузер
-        driver.quit();
     }
 }

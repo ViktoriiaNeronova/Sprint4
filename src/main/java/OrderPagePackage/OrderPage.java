@@ -19,36 +19,36 @@ public class OrderPage {
 
     // Действия над элементами
     public void setNameValue(String value) {
-        WebElement nameInput = driver.findElement(OrderPageLocators.nameInput);
+        WebElement nameInput = driver.findElement(OrderPageLocators.NAME_INPUT);
         assertTrue(nameInput.isEnabled());
         nameInput.sendKeys(value);
         assertEquals(value, nameInput.getAttribute("value"));
     }
     public void setSurnameValue(String value) {
-        WebElement surnameInput = driver.findElement(OrderPageLocators.surnameInput);
+        WebElement surnameInput = driver.findElement(OrderPageLocators.SURNAME_INPUT);
         assertTrue(surnameInput.isEnabled());
         surnameInput.sendKeys(value);
         assertEquals(value, surnameInput.getAttribute("value"));
     }
     public void setAddressValue(String value) {
-        WebElement addressInput = driver.findElement(OrderPageLocators.addressInput);
+        WebElement addressInput = driver.findElement(OrderPageLocators.ADDRESS_INPUT);
         assertTrue(addressInput.isEnabled());
         addressInput.sendKeys(value);
         assertEquals(value, addressInput.getAttribute("value"));
     }
     public void setPhoneValue(String value) {
-        WebElement phoneInput = driver.findElement(OrderPageLocators.phoneInput);
+        WebElement phoneInput = driver.findElement(OrderPageLocators.PHONE_INPUT);
         assertTrue(phoneInput.isEnabled());
         phoneInput.sendKeys(value);
         assertEquals(value, getPhoneValue());
     }
     public String getPhoneValue(){
-        WebElement phoneInput = driver.findElement(OrderPageLocators.phoneInput);
+        WebElement phoneInput = driver.findElement(OrderPageLocators.PHONE_INPUT);
         assertTrue(phoneInput.isEnabled());
         return phoneInput.getAttribute("value");
     }
     public void clickSubwayInput(){
-        WebElement subwayInput = driver.findElement(OrderPageLocators.subwayInput);
+        WebElement subwayInput = driver.findElement(OrderPageLocators.SUBWAY_INPUT);
         assertTrue(subwayInput.isEnabled());
         subwayInput.click();
     }
@@ -59,69 +59,69 @@ public class OrderPage {
     }
 
     public void clickOrderFurtherButton(){
-        WebElement orderFurtherButton = driver.findElement(OrderPageLocators.orderFurtherButton);
+        WebElement orderFurtherButton = driver.findElement(OrderPageLocators.ORDER_FURTHER_BUTTON);
         assertTrue(orderFurtherButton.isEnabled());
         orderFurtherButton.click();
     }
     public void clickWhenToBringScooterButton(){
-        WebElement whenToBringScooterButton = driver.findElement(OrderPageLocators.whenToBringScooterButton);
+        WebElement whenToBringScooterButton = driver.findElement(OrderPageLocators.WHEN_TO_BRING_SCOOTER_BUTTON);
         assertTrue(whenToBringScooterButton.isEnabled());
         whenToBringScooterButton.click();
     }
     public void selectPickTodayDay(){
         // Становится видимым только после клика на whenToBringScooterButton
-        WebElement calendarPickTodayDayButton = driver.findElement(OrderPageLocators.calendarPickTodayDayButton);
+        WebElement calendarPickTodayDayButton = driver.findElement(OrderPageLocators.CALENDAR_PICK_TODAY_DAY_BUTTON);
         calendarPickTodayDayButton.click();
     }
     public void clickRentalPeriodButton(){
-        WebElement rentalPeriodButton = driver.findElement(OrderPageLocators.rentalPeriodButton);
+        WebElement rentalPeriodButton = driver.findElement(OrderPageLocators.RENTAL_PERIOD_BUTTON);
         assertTrue(rentalPeriodButton.isEnabled());
         rentalPeriodButton.click();
     }
     public void selectRentOneDay(){
         // Становится видимым только после клика на rentalPeriodButton
-        WebElement rentOneDayButton = driver.findElement(OrderPageLocators.rentOneDayButton);
+        WebElement rentOneDayButton = driver.findElement(OrderPageLocators.RENT_ONE_DAY_BUTTON);
         rentOneDayButton.click();
     }
     public void selectRentSevenDays(){
         // Становится видимым только после клика на rentalPeriodButton
-        WebElement rentSevenDaysButton = driver.findElement(OrderPageLocators.rentSevenDaysButton);
+        WebElement rentSevenDaysButton = driver.findElement(OrderPageLocators.RENT_SEVEN_DAYS_BUTTON);
         rentSevenDaysButton.click();
     }
 
     public void clickColorScooterBlackButton(){
-        WebElement colorScooterBlackButton = driver.findElement(OrderPageLocators.colorScooterBlackButton);
+        WebElement colorScooterBlackButton = driver.findElement(OrderPageLocators.COLOR_SCOOTER_BLACK_BUTTON);
         assertTrue(colorScooterBlackButton.isEnabled());
         colorScooterBlackButton.click();
     }
 
     public void clickColorScooterGreyButton(){
-        WebElement colorScooterGreyButton = driver.findElement(OrderPageLocators.colorScooterGreyButton);
+        WebElement colorScooterGreyButton = driver.findElement(OrderPageLocators.COLOR_SCOOTER_GREY_BUTTON);
         assertTrue(colorScooterGreyButton.isEnabled());
         colorScooterGreyButton.click();
     }
     public void setCommentForCourier(String value) {
-        WebElement commentForCourierInput = driver.findElement(OrderPageLocators.commentForCourierInput);
+        WebElement commentForCourierInput = driver.findElement(OrderPageLocators.COMMENT_FOR_COURIER_INPUT);
         assertTrue(commentForCourierInput.isEnabled());
         commentForCourierInput.sendKeys(value);
     }
 
     public void clickCreateOrderButton(){
-        WebElement createOrderButton = driver.findElement(OrderPageLocators.createOrderButton);
+        WebElement createOrderButton = driver.findElement(OrderPageLocators.CREATE_ORDER_BUTTON);
         assertTrue(createOrderButton.isEnabled());
         createOrderButton.click();
     }
 
     public void clickConfirmOrderYesButton(){
-        WebElement confirmOrderYesButton = driver.findElement(OrderPageLocators.confirmOrderYesButton);
+        WebElement confirmOrderYesButton = driver.findElement(OrderPageLocators.CONFIRM_ORDER_YES_BUTTON);
         assertTrue(confirmOrderYesButton.isEnabled());
         confirmOrderYesButton.click();
     }
 
     // метод ожидания прогрузки окна создания заказа
     public void waitForLoadCompleteOrderModalWindow() {
-        new WebDriverWait(driver, Duration.ofSeconds(1L)).until(driver -> (driver.findElement(OrderPageLocators.completeOrderModalWindowDisplayed).isEnabled()));
-        assertTrue("Окно с сообщением об успешном создании заказа не появилось", driver.findElement(OrderPageLocators.completeOrderModalWindowDisplayed).isEnabled());
+        new WebDriverWait(driver, Duration.ofSeconds(1L)).until(driver -> (driver.findElement(OrderPageLocators.COMPLETE_ORDER_MODAL_WINDOW_DISPLAYED).isEnabled()));
+        assertTrue("Окно с сообщением об успешном создании заказа не появилось", driver.findElement(OrderPageLocators.COMPLETE_ORDER_MODAL_WINDOW_DISPLAYED).isEnabled());
     }
 
     // Наборы действий
