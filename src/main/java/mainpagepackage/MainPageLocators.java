@@ -1,4 +1,4 @@
-package MainPagePackage;
+package mainpagepackage;
 
 import org.openqa.selenium.By;
 

@@ -1,12 +1,9 @@
-import MainPagePackage.MainPage;
-import MainPagePackage.MainPageLocators;
-import OrderPagePackage.OrderPage;
-import org.junit.After;
-import org.junit.Before;
+import mainpagepackage.MainPage;
+import mainpagepackage.MainPageLocators;
+import orderpagepackage.OrderPage;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 

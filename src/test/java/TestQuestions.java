@@ -1,5 +1,5 @@
-import MainPagePackage.MainPage;
-import MainPagePackage.MainPageLocators;
+import mainpagepackage.MainPage;
+import mainpagepackage.MainPageLocators;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
